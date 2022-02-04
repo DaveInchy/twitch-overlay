@@ -14,7 +14,7 @@ const RootStructure = (
   <react.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" component={App({fs: require.resolve('../fs')})} />
+        <Route path="/" component={App} />
         <Route path="/olay?pass=281297" component={Overlay} />
       </Routes>
     </Router>

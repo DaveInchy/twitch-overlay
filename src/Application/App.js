@@ -9,12 +9,6 @@ import { Wrapper, Container, Section } from '../Components/Modules/Containers';
 
 export default class App extends react.Component {
 
-    constructor(props) {
-        this.fs = props.fsModule || fs;
-        super(props);
-        return;
-    }
-
     render() {
 
         var logoPath = './src/Resources/logo.svg';
