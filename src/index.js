@@ -1,7 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import react from 'react';
+import react_dom from 'react-dom';
+import { Routes, Router, Route} from 'react-router-dom';
 
-import App from './Application/App.js';
+import App from './Application/App';
+import Overlay from './Application/App';
 import './index.css';
 
 // Content container
@@ -9,13 +11,18 @@ const RootContainer = document.getElementById('root');
 
 // Content structure
 const RootStructure = (
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <react.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" component={App({fs: require.resolve('../fs')})} />
+        <Route path="/olay?pass=281297" component={Overlay} />
+      </Routes>
+    </Router>
+  </react.StrictMode>
 );
 
 // Application rendering
-ReactDOM.render( RootStructure, RootContainer );
+react_dom.render( RootStructure, RootContainer );
 
 // Performance monitoring
 const reportWebVitals = onPerfEntry => {
