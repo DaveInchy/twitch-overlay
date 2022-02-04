@@ -6,6 +6,15 @@ import App from './Application/App';
 import Overlay from './Application/App';
 import './index.css';
 
+import('fs').then(fs => {
+  import('path').then(path => {
+    const cwd = process.cwd();
+    const { readFileSync, readFile } = fs;
+    const logoPath = './src/Resources/logo.svg';
+    const logoResolved = readFileSync(path.resolve(cwd, logoPath));
+  });
+});
+
 // Content container
 const RootContainer = document.getElementById('root');
 
