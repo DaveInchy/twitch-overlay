@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import react from 'react';
 
-import { makeClasses, makeStyles, combineClasses, combineStyles } from '../Components/Classes/Element';
+import { makeClasses, makeStyles, combineClasses, combineStyles } from '../Components/Classes/ComponentAttributes';
 import { Wrapper, Container, Section } from '../Components/Modules/Containers';
 
 import logoSrc from '../Resources/new_world/NW-logo.svg';
@@ -11,9 +11,9 @@ export default class App extends react.Component {
 
     render() {
 
-        const LogoClasses = makeClasses('text-center m-auto w-auto h-48');
+        const LogoClasses = makeClasses('text-center m-auto w-auto h-32');
 
-        var Logo = <img className={LogoClasses} src={shadowSrc} alt="logo" />;
+        var Logo = <img className={LogoClasses} src={logoSrc} alt="logo" />;
 
         return (
             <Wrapper

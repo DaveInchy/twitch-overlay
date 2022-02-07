@@ -11,7 +11,30 @@ const RootContainer = document.getElementById('root');
 
 // Content structure
 const RootStructure = (
-  <App />
+  <react.StrictMode>
+    <Router>
+      <Routes location={"localhost:3000"}>
+        <Route
+          path="/"
+          element={<App />}
+        >
+          <Route
+            path="index"
+            element={<App />}
+          >
+            <Route path="new-world" element={<App />} />
+          </Route>
+          <Route
+            path="dashboard"
+            element={<App />}
+          >
+            <Route path="sign-in" element={<App />} />
+            <Route path="sign-up" element={<App />} />
+          </Route>
+        </Route>
+      </Routes>
+    </Router>
+  </react.StrictMode>
 );
 
 // Application rendering
