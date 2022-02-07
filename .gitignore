@@ -1,7 +1,7 @@
 # -------------- NODEJS -------------- #
 
 # deps
-/node_modules
+**/**/node_modules
 /.pnp
 .pnp.js
 
@@ -25,11 +25,6 @@ yarn-error.log*
 # -------------- MANUAL -------------- #
 /.vscode
 
-# --------------- OTHER -------------- #
-/.**
+# -------------- OTHER --------------- #
 
 # ------------ EXCEPTIONS ------------ #
-!/node_modules/react-scripts/config/**/**
-!/node_modules/react-scripts/config/webpack.config.dev.js
-
-# -------------- END -------------- #

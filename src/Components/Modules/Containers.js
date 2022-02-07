@@ -94,7 +94,9 @@ export class Wrapper extends React.Component {
         // Return the component
         return (
             <>
-                <div class={Classes} style={Styles} children={this.props.children} id={this.props.id}/>
+                <div class={Classes} style={Styles} id={this.props.id}>
+                    {this.props.children}
+                </div>
             </>
         );
     }

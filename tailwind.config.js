@@ -1,16 +1,7 @@
 module.exports = {
   content: [
+    './**.{js,jsx}',
     './src/**/*.{js,jsx}',
-    './src/**/*.{ts,tsx}',
-    './src/**/*.{css,pcss}',
-    './src/**/*.{html,md,txt}',
-    './src/**/*.{json,yml,yaml}',
-    './src/**/*.{jpg,jpeg,png,gif,svg}',
-    './src/**/*.{ico,webp}',
-    './src/**/*.{woff,woff2,eot,ttf,otf}',
-    './src/**/*.{mp3,ogg,wav}',
-    './src/**/*.{mp4,webm,ogv}',
-    './',
   ],
   theme: {
     extend: {
@@ -36,6 +27,5 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss'),
   ],
 }
